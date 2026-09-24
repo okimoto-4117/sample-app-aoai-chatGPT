@@ -108,6 +108,7 @@ class _AzureOpenAISettings(BaseSettings):
     temperature: float = 0
     top_p: float = 0
     max_tokens: int = 1000
+    max_completion_tokens: int = 1000
     stream: bool = True
     stop_sequence: Optional[List[str]] = None
     seed: Optional[int] = None
