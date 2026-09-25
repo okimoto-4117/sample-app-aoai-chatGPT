@@ -42,8 +42,8 @@ class _UiSettings(BaseSettings):
     )
 
     title: str = "社内AIチャット"
-    logo: Optional[str] = "/icon01_48.png"
-    chat_logo: Optional[str] = "/icon01_48.png"
+    logo: Optional[str] = "/logo.png"
+    chat_logo: Optional[str] = "/logo.png"
     chat_title: str = "社内AIチャット"
     chat_description: str = "相互薬工用AIチャットシステムです"
     favicon: str = "/favicon.ico"
