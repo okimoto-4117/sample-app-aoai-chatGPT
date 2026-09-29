@@ -45,7 +45,7 @@ class _UiSettings(BaseSettings):
     logo: Optional[str] = "/favicon.ico"
     chat_logo: Optional[str] = "/favicon.ico"
     chat_title: str = "社内AIチャット"
-    chat_description: str = "相互薬工用AIチャットシステムです"
+    chat_description: str = "AIチャットシステムです"
     favicon: str = "/favicon.ico"
     show_share_button: bool = False
     show_chat_history_button: bool = False
