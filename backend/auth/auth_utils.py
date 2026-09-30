@@ -1,5 +1,3 @@
-import logging
-
 def get_authenticated_user_details(request_headers):
     user_object = {}
 
@@ -19,8 +17,7 @@ def get_authenticated_user_details(request_headers):
     user_object['client_principal_b64'] = raw_user_object.get('X-Ms-Client-Principal')
     user_object['aad_id_token'] = raw_user_object.get('X-Ms-Token-Aad-Id-Token')
 
-    # アクセス監査ログ
-    logging.info(
+    print(
         f"AI_CHAT_ACCESS user={user_object['user_name']} "
         f"ip={raw_user_object.get('X-Client-Ip')}"
     )
