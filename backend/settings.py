@@ -41,7 +41,7 @@ class _UiSettings(BaseSettings):
         env_ignore_empty=True
     )
 
-    title: str = "テスト"
+    title: str = "test"
     logo: Optional[str] = "/logo.ico"
     chat_logo: Optional[str] = "/logo.ico"
     chat_title: str = "社内AIチャット"
