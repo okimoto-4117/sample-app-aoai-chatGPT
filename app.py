@@ -65,7 +65,7 @@ async def index():
         request_headers=request.headers
     )
 
-    logging.warning(json.dumps(json.dumps({
+    logging.warning(json.dumps({
         "event": "CHAT_ACCESS",
         "user_name": authenticated_user.get("user_name"),
         "user_principal_id": authenticated_user.get("user_principal_id"),
