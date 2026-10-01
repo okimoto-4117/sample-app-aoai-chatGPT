@@ -61,6 +61,21 @@ def create_app():
 
 @bp.route("/")
 async def index():
+    authenticated_user = get_authenticated_user_details(
+        request_headers=request.headers
+    )
+
+    logging.info(json.dumps({
+        "event": "CHAT_ACCESS",
+        "user_name": authenticated_user.get("user_name"),
+        "user_principal_id": authenticated_user.get("user_principal_id"),
+        "auth_provider": authenticated_user.get("auth_provider"),
+        "source_ip": request.headers.get(
+            "X-Forwarded-For",
+            request.remote_addr
+        )
+    }, ensure_ascii=False))
+
     return await render_template(
         "index.html",
         title=app_settings.ui.title,
