@@ -1,3 +1,5 @@
+from urllib.parse import unquote
+
 def get_authenticated_user_details(request_headers):
     user_object = {}
 
