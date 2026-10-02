@@ -67,13 +67,7 @@ async def index():
 
     logging.warning(json.dumps({
         "event": "CHAT_ACCESS",
-        "user_name": authenticated_user.get("user_name"),
-        "user_principal_id": authenticated_user.get("user_principal_id"),
-        "auth_provider": authenticated_user.get("auth_provider"),
-        "source_ip": request.headers.get(
-            "X-Forwarded-For",
-            request.remote_addr
-        )
+        "raw_user_name": authenticated_user.get("user_name")
     }, ensure_ascii=False))
 
     return await render_template(
