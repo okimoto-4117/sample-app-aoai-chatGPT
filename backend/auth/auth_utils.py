@@ -22,8 +22,7 @@ def get_authenticated_user_details(request_headers):
     user_object['aad_id_token'] = raw_user_object.get('X-Ms-Token-Aad-Id-Token')
 
     print(
-        f"AI_CHAT_ACCESS user={user_object['user_name']} "
-        f"ip={raw_user_object.get('X-Client-Ip')}"
+        f"RAW_HEADER={raw_user_object.get('X-Ms-Client-Principal-Name')}"
     )
 
     return user_object
